@@ -1,3 +1,7 @@
+* {
+    outline: none;
+}
+
 html, body {
     background: #201b2c;
     font-family: 'Noto Sans', sans-serif;
@@ -11,7 +15,7 @@ html, body {
 
 .left-login {
     width: 50vw;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +33,7 @@ html, body {
 
 .right-login {
     width: 50vw;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +52,9 @@ html, body {
 }
 
 .card-login h1 {
+    font-size: 22px;
     color: #00ff88;
+    outline: none;
     font-weight: 800;
     margin: 0;
 }
@@ -75,12 +81,13 @@ html, body {
 }
 
 .textfield label {
-    color: #f0ffffde;
+    color: #00FF88;
     margin-bottom: 10px;
 }
 
 .textfield::placeholder {
-    color: #f0ffff94;
+    color: #9ef1ca;
+    
 }
 
 .btn-login {
@@ -97,34 +104,38 @@ html, body {
     box-shadow: 0px 10px 40px -12px #00ff8052;
 }
 
+.textfield:hover {
+    transform: scale(1.015);
+}
+
+.textfield::placeholder:active {
+    color: #00FF88;
+}
+
+.btn-login:hover {
+    transform: scale(1.015);
+}
+
+.btn-login:active {
+    background: #03bb65;
+}
+
 footer .container {
     color: #00ff88;
     background: #2f2841;
-    font-size: 16px;
+    font-size: 15px;   
     height: 100px;
     display: flex;
     justify-content:space-around;
     align-items: center;    
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: #201b2c;
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #00FF88;
-    border-radius: 10px;
-}
-
 @media only screen and (max-width:950px){
     .card-login {
-        width: 85%;
+        width: 65%;
+        margin-right: 40px;
     }
+    
 }
 
 @media only screen and (max-width:600px){
@@ -145,16 +156,20 @@ footer .container {
         height: auto;
     }
 
+    .card-login {
+        margin: 30px 40px 50px;
+    }
+
     .left-login-image {
         width: 50vh;
     }
 
-    footer .container img {
-        flex-direction: column;
+    footer .container {
+        margin-top: 47px;
     }
 }
 
-@media only screen and (max-width:405px){
+@media only screen and (max-width:420px){
     .main-login {
         flex-direction: column;
     }
@@ -173,7 +188,21 @@ footer .container {
     }
 
     .left-login-image {
-        width: 50vh;
-
+        width: 40vh;
+        margin-top: 15%;
     }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #201b2c;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #00FF88;
+    border-radius: 10px;
 }
